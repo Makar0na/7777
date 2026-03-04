@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Горный Алтай</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #f4f6f8;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* ===== HERO ===== */
+
+header {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1920") center/cover fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+    font-size: 64px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    animation: fadeIn 2s ease;
+}
+
+/* ===== SECTIONS ===== */
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 100px 10%;
+    background: white;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 1s ease;
+}
+
+.section:nth-child(even) {
+    flex-direction: row-reverse;
+    background: #eef2f5;
+}
+
+.section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.text {
+    flex: 1;
+}
+
+.text h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.text p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.image {
+    flex: 1;
+}
+
+.image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    transition: transform 0.5s ease;
+}
+
+.image img:hover {
+    transform: scale(1.05);
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+    text-align: center;
+    padding: 60px 20px;
+    background: #1f2a38;
+    color: white;
+}
+
+/* ===== ANIMATION ===== */
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width: 900px) {
+    .section {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 42px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Горный Алтай</h1>
+</header>
+
+<!-- ВСТУПЛЕНИЕ -->
+<section class="section">
+    <div class="text">
+        <h2>Сокровища удивительного края</h2>
+        <p>Алтай — это мир, где за каждым поворотом открывается новая страница природы: бирюзовые озёра, мощные водопады, марсианские пейзажи и тёплые озёра с зимующими лебедями.</p>
+    </div>
+    <div class="image">
+        <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=1200" alt="Алтай горы">
+    </div>
+</section>
+
+<!-- 1 -->
+<section class="section">
+    <div class="text">
+        <h2>Озеро Куйгук и Водопад</h2>
+        <p>Высокогорное озеро на высоте около 2000 метров с кристально-бирюзовой водой.</p>
+        <p>Водопад Куйгук достигает 30 метров. Маршрут проходит через кедровый лес и альпийские луга.</p>
+    </div>
+    <div class="image">
+        <img src="8.jpg" alt="Озеро">
+    </div>
+</section>
+
+<!-- 2 -->
+<section class="section">
+    <div class="text">
+        <h2>Водопад Учар</h2>
+        <p>Самый большой каскадный водопад Горного Алтая — около 160 метров высотой.</p>
+        <p>Маршрут средней сложности, требуется целый день и удобная обувь.</p>
+    </div>
+    <div class="image">
+        <img src="5.jpg" alt="Водопад">
+    </div>
+</section>
+
+<!-- 3 -->
+<section class="section">
+    <div class="text">
+        <h2>Ледник Актру</h2>
+        <p>Крупный ледник длиной около 8 км в Северо-Чуйском хребте.</p>
+        <p>Рядом находится Голубое озеро ледникового цвета.</p>
+    </div>
+    <div class="image">
+        <img src="1.jpg" alt="Ледник">
+    </div>
+</section>
+
+<!-- 4 -->
+<section class="section">
+    <div class="text">
+        <h2>Алтайский Марс (Кызыл-Чин)</h2>
+        <p>Разноцветные глиняные горы с красными, оранжевыми и зелёными оттенками.</p>
+        <p>Пейзажи напоминают поверхность другой планеты.</p>
+    </div>
+    <div class="image">
+        <img src="2.jpg" alt="Марсианские пейзажи">
+    </div>
+</section>
+
+<!-- 5 -->
+<section class="section">
+    <div class="text">
+        <h2>Шинокские водопады</h2>
+        <p>Каскад из трёх живописных водопадов в глубоком ущелье.</p>
+        <p>Идеальное место для спокойного семейного отдыха.</p>
+    </div>
+    <div class="image">
+        <img src="00.jpg" alt="Каскад водопадов">
+    </div>
+</section>
+
+<!-- 6 -->
+<section class="section">
+    <div class="text">
+        <h2>Гейзерное озеро</h2>
+        <p>Небольшое озеро диаметром около 30 м с причудливыми узорами на поверхности.</p>
+        <p>Рисунки создаются выбросами голубой глины со дна.</p>
+    </div>
+    <div class="image">
+        <img src="6.jpg" alt="Голубое озеро">
+    </div>
+</section>
+
+<!-- 7 -->
+<section class="section">
+    <div class="text">
+        <h2>Водопад Куркуре</h2>
+        <p>Мощный водопад высотой около 30 метров на реке Куркуре.</p>
+        <p>Маршрут подходит для подготовленных туристов.</p>
+    </div>
+    <div class="image">
+        <img src="11.jpg" alt="Водопад в горах">
+    </div>
+</section>
+
+<!-- 8 -->
+<section class="section">
+    <div class="text">
+        <h2>Лебединое озеро</h2>
+        <p>Озеро Светлое не замерзает зимой благодаря тёплым ключам.</p>
+        <p>Здесь ежегодно зимует до 500 лебедей.</p>
+    </div>
+    <div class="image">
+        <img src="4.jpg" alt="Лебеди">
+    </div>
+</section>
+
+<!-- 9 -->
+<section class="section">
+    <div class="text">
+        <h2>Курорт Манжерок</h2>
+        <p>Современный всесезонный туристический комплекс.</p>
+        <p>Горнолыжные трассы, канатная дорога и развитая инфраструктура.</p>
+    </div>
+    <div class="image">
+        <img src="22.jpg" alt="Курорт">
+    </div>
+</section>
+
+<footer>
+    <p>Совет путешественникам: уважайте природу Алтая и будьте готовы к настоящим приключениям!</p>
+</footer>
+
+<script>
+const sections = document.querySelectorAll('.section');
+
+window.addEventListener('scroll', () => {
+    sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if(rect.top < window.innerHeight - 100){
+            section.classList.add('active');
+        }
+    });
+});
+</script>
+
+</body>
+</html>
